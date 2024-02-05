@@ -70,6 +70,7 @@
       if (inputValue.trim()) {
         push(peopleListInDB, inputValue);
         playGIF();
+        Jconfity();
         clearInputFieldEl();
       }
     });
@@ -123,5 +124,15 @@
       peopleListEl.append(newEl);
     }
 
+    function Jconfity(){
+      const jsConfetti = new JSConfetti()
+        jsConfetti.addConfetti({
+            emojis: ['🎁', '🎊'],
+            emojiSize: 50,
+            confettiNumber: 90,
+            confettiRadius: 6000,
+        })
+        jsConfetti.addConfetti()
+    }
 
 </script>
